@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" type="text/css" href="js/jquery-ui-1.12.1.custom/jquery-ui.css">
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+
+	<title>Вакансии</title>
+</head>
+<body>
+	<header class="head">
+    <div align="center" class="logo">
+        <a href=#><img src="https://cdn1.rabota.ru/sf/nuxt-public-rabota/img/logo-rabota-blue.e7814bd.svg" /></a>
+        <p>Работа.ру — сервис для поиска работы и сотрудников на российском рынке. Компания быстро растет и развивается, чтобы стать лидером российского hr-tech рынка.</p>
+        <button id="open" ><h2>Подать резюме!</h2></button>
+    </div>
+	</header>
+<main class="main">
+<h1>Работа найдется для каждого</h1>
+<div id="tabs">
+	<ul>
+		<li><a href="#tabs-1">Вакансии дня</a></li>
+		<li><a href="#tabs-2">Компании дня</a></li>
+		<li><a href="#tabs-3">Работа из дома</a></li>
+	</ul>
+
+	<div id="tabs-1">
+	    <h2><a href=# >Риэлтор/Агент по недвижимости</a></h2>
+		<h3>от 70 000 до 120 000 руб.</h3>
+		<p>Оператор недвижимости ПЕРСПЕКТИВА 24, Уфа</p>
+		<hr>
+		<h2><a href=# >Продавец-консультант в магазин мужской одежды ПатрикМен</a></h2>
+		<h3>от 45 000 до 65 000 руб.</h3>
+		<p>Patrik man, Уфа</p>
+		<hr>
+		<h2><a href=# >Главный бухгалтер</a></h2>
+		<h3>от 50 000 до 50 000 руб.</h3>
+		<p>Акустические и Звукоизоляционные материалы, Уфа</p>
+		<hr>
+	</div>
+
+	<div id="tabs-2">
+		<h2><a href=# >СНАБРЕСУРС</a></h2>
+		<h2><a href=# >Альфамед</a></h2>
+		<h2><a href=# >Свартэкс Уфа</a></h2>
+		<h2><a href=# >CALZEDONIA (ЛСК-ГРУПП, ООО)</a></h2>
+		<h2><a href=# >МонтажТехСтрой</a></h2>
+	</div>
+
+	<div id="tabs-3">
+		<h2>Найдено 32 442 вакансии</h2>
+		<br>
+		<h3><a href=# >Frontend-разработчик</a></h3>
+		<h4>100 000 – 150 000 руб.</h4>
+		<p>Можно работать из дома</p>
+		<p>ООО Сезон</p>
+		<p>Нижний Новгород, Горьковская</p>
+		<p>Отклик без резюме</p>
+		<p>Самостоятельная разработка/развитие в двух направлениях: Взаимодействие с командой разработки API и мобильных платформ, дизайнером.
+Уверенное владение Vue 2, Nuxt 2, JavaScript, HTML, CSS, Git. Владение BEM, SCSS, TypeScript, Vue 3, Nest, Sequelize, UI frameworks...</p>
+		<hr>
+		<h3><a href=# >Front-end разработчик (React, Typescript)</a></h3>
+		<h4>100 000 – 250 000 руб.</h4>
+		<p>CSSSR</p>
+		<p>Москва</p>
+		<p>Работать с React на крупном проекте со сложной бизнес-логикой. Разрабатывать новые фичи, внедрять новую архитектуру, оптимизировать, писать UNIT и...
+Глубокие знания JavaScript. Практический опыт разработки на TypeScript. Практический опыт разработки React-приложений от двух лет. Понимание общей концепции Flux.</p>
+		<hr>
+		<h3><a href=# >Разработчик, либо Laravel+Vue/Vuex, либо Node.js+HTML5/JavaScript (удалённо)</a></h3>
+		<h4>70 000 – 250 000 руб.</h4>
+		<p>Можно работать из дома</p>
+		<p>Slepozavr.ru</p>
+		<p>Псков</p>
+		<p>Отклик без резюме</p>
+		<p>рафик работы и отчётность: свободный. Есть дедлайн, плюс дважды в неделю вам нужно заливать то что сделано в гит, на...
+По сложности: код фронта аккуратен, работать с ним должно быть приятно. Бек похуже, но работать с ним тоже можно (возможно...</p>
+		<hr>
+	</div>
+</div>
+<br>
+		<br>
+		<div id="dialog" class="dialog" title="Оформление заказа">
+		<form class="form-inline">
+		<div class="form-group">
+		<label >ФИО</label><br>
+		<input type="text" name="name" id="name">
+		<p>
+
+		<label for="weight">Укажите желаему зп:</label>
+		<input type="text" name="weight" id="weight">
+		<p>
+		<div id="slider"></div>
+		<p>
+
+		<label for="meat">Выберите способ работы:</label>
+		<input type="text" name="example" list="lst" id="meat">
+		<datalist id="lst">
+		<option value="Работа из дома">
+		<option value="Работа в офисе">
+		</datalist>
+		<p>
+
+		<label for="date">Выберите день: </label>
+		<input type="text" class="form-control" id="date">
+		<p>
+		<label for="town">Введите город:</label>
+		<input type="text" class="form-control" list="tow" id="town">
+		<datalist id="tow">
+		<option value="Уфа">
+		<option value="Москва">
+		<option value="СПБ">
+		</datalist>
+		<p>
+		
+		<label for="str">Опишите свои сильные стороны:</label>
+		<input type="text" id="str">
+		<p>
+		</div>
+		</form>
+		</div>
+	
+		</div>
+	</div>
+</main>
+	<div id="succ" class="succ" title="Уведомление" style="display: none;"><h2>Ваше резюме принято.</h2></div>
+</body>
+</html>
