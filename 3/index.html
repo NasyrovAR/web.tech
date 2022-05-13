@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Вакансии</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.cycle.all.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+<div id="wrapper">
+  <header class="head">
+    <div align="center" class="logo">
+        <a href=#><img src="https://cdn1.rabota.ru/sf/nuxt-public-rabota/img/logo-rabota-blue.e7814bd.svg" /></a>
+        <p>Работа.ру — сервис для поиска работы и сотрудников на российском рынке. Компания быстро растет и развивается, чтобы стать лидером российского hr-tech рынка.</p>
+      <br />
+    <a style="border: 2px solid; padding: 10px; border-radius: 25px;" href="index2.html">Отзыв</a>
+    </div>
+	</header>
+  <br />
+  <div id="content">
+    <div class="recent">
+    </div>
+		<input type="button" id="getUser" value="Показать еще"/>
+  </div>
+</div>
+</body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $('#getUser').on('click',function(){
+		var tek = $('.post').length+1;
+		var kol = 5;
+        $.ajax({
+            type:'POST',
+            url:'getData.php',
+            dataType: "json",
+            data:{tek:tek, kol:kol},
+            success:function(data){
+			    for (var i=0;i<5;i++){
+					$('.recent').append('<div class="post"> <h2>'+data[i].headline+'</h2><p><h2>'+data[i].zp+
+						'</h2><p>'+data[i].name+
+						'</p><p class="readmore"> <a href="#">Перейти к описанию вакансии</a> </p><div class="break"></div></div>');
+			    }
+            }
+        });
+    });
+	$('#getUser').click();
+});
+</script>
